@@ -1,0 +1,8 @@
+{"slug":"java-strings-cheatsheet","palette":"graphite","series":"Java Strings","title":"Java Strings in 6 slides","hook":"the ones every beginner trips on","cta":"Save this for your next exam 💾",
+"slides":[
+{"heading":"Strings never change","body":"Every method returns a **new** String. The original stays the same.","code":"String s = \"hi\";\ns.toUpperCase();      // lost!\ns = s.toUpperCase();  // HI","note":"keep the result!"},
+{"heading":"== vs equals()","body":"`==` asks: same object? `equals()` asks: same text?","code":"a.equals(b)   // compare text","note":"for text, always equals"},
+{"heading":"substring","body":"Start is included, end is **not**.","code":"\"decoded\".substring(0, 3) // \"dec\""},
+{"heading":"indexOf","body":"Where does it start? `-1` means not found.","code":"\"java\".indexOf('v')  // 2\n\"java\".indexOf('z')  // -1"},
+{"heading":"Building in a loop","body":"Use `StringBuilder`, not `+` over and over.","code":"var sb = new StringBuilder();\nfor (int i = 0; i < 3; i++)\n    sb.append(i);\nsb.toString();  // \"012\""}
+]}
